@@ -5,7 +5,7 @@ class Game < ApplicationRecord
   include GamesHelper
   include ActiveModel::Validations
 
-  attr_accessible :board
+  attr_accessor :board
 
   validates :board, :presence => true
 
