@@ -5,13 +5,15 @@
   transition: all 0.3s ease;
   height: 45px;
   width: 100%;
-  justify-content: space-around;
+  justify-content: flex;
+  display: inline-block;
 }
 
 /* Logo */
 .navbar-left {
   display: flex;
   width: 100%;
+  margin-left: 0;
 }
 
 .navbar-logo img {
@@ -30,14 +32,20 @@
   font-family: "Montserra", "Helvetica", "Arial";
 }
 
-// .navbar-link {
-//   color: $dark-gray;
-//   cursor: pointer;
-//   font-size: 15px;
-//   text-decoration: none;
-// }
+#navbar-new {
+  margin-left: 900px;
+  margin-top: 12px;
+}
 
-// .navbar-link:hover {
-//   color: $red;
-//   text-decoration: none;
-// }
+.navbar-link {
+  color: $dark-gray;
+  cursor: pointer;
+  font-family: "Montserra", "Helvetica", "Arial";
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: $red;
+  text-decoration: none;
+}
