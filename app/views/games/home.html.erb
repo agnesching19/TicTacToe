@@ -1,19 +1,19 @@
 <table class='board'>
   <tbody>
     <tr>
-      <td><%= @game.board[0] %></td>
-      <td><%= @game.board[1] %></td>
-      <td><%= @game.board[2] %></td>
+      <td class='left top'><%= @game.board[0] %></td>
+      <td class='top vertical-mid'><%= @game.board[1] %></td>
+      <td class='top right'><%= @game.board[2] %></td>
     </tr>
     <tr>
-      <td><%= @game.board[3] %></td>
-      <td><%= @game.board[4] %></td>
-      <td><%= @game.board[5] %></td>
+      <td class='left horizontal-mid'><%= @game.board[3] %></td>
+      <td class='vertical-mid horizontal-mid'><%= @game.board[4] %></td>
+      <td class='right horizontal-mid'><%= @game.board[5] %></td>
     </tr>
     <tr>
-      <td><%= @game.board[6] %></td>
-      <td><%= @game.board[7] %></td>
-      <td><%= @game.board[8] %></td>
+      <td class='left bottom'><%= @game.board[6] %></td>
+      <td class='vertical-mid bottom'><%= @game.board[7] %></td>
+      <td class='right bottom'><%= @game.board[8] %></td>
     </tr>
   </tbody>
 </table>
