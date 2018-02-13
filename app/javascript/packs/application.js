@@ -9,6 +9,5 @@
 
 console.log('Hello World from Webpacker')
 
-const list = document.getElementById("home-board");
-console.log(list instanceof HTMLTableElement);
-// => "UL"
+const grid_0 = document.getElementById("grid-0");
+console.log(typeof grid_0);
