@@ -1,6 +1,7 @@
 const initialBoard = document.getElementById('navbar-new');
 initialBoard.addEventListener("click", (e) => {
   e.preventDefault();
+  alert('Game starts!');
   grid_0.innerText = '';
   grid_1.innerText = '';
   grid_2.innerText = '';
@@ -21,7 +22,7 @@ grid_0.addEventListener("click", (e) => {
 const grid_1 = document.getElementById('grid-1');
 grid_1.addEventListener("click", (e) => {
   e.preventDefault();
-  grid_1.innerText = 'X';
+  grid_1.innerText = "X"
 });
 
 const grid_2 = document.getElementById('grid-2');
@@ -65,3 +66,4 @@ grid_8.addEventListener("click", (e) => {
   e.preventDefault();
   grid_8.innerText = 'X';
 });
+
