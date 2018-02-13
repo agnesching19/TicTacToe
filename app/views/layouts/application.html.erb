@@ -7,7 +7,6 @@
     <%= javascript_include_tag "application" %>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
   </head>
 
   <body>
@@ -20,6 +19,9 @@
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
       <%= yield %>
+
     </div>
+
+    <%= javascript_pack_tag "application" %> <!-- from app/javascript/packs/application.js -->
   </body>
 </html>

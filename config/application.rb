@@ -16,3 +16,4 @@ module TicTacToe
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+require 'webpacker/railtie'

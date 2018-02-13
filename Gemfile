@@ -25,6 +25,8 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'nokogiri', '~> 1.6'
 gem 'webpacker', '~> 3.2'
+gem 'sprockets', '3.7.1'
+gem 'sprockets-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
