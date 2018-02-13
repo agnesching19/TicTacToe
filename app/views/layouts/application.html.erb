@@ -19,9 +19,7 @@
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
       <%= yield %>
-
     </div>
-
     <%= javascript_pack_tag "application" %> <!-- from app/javascript/packs/application.js -->
   </body>
 </html>
