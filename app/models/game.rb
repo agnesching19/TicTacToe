@@ -9,15 +9,11 @@ class Game < ApplicationRecord
 
   validates :board, :presence => true
 
-  # Initializes the object with a board, made up of a two dimensional array of
-  # nils. Eg
-  #   board = [ [nil, nil, nil],
-  #             [nil, nil, nil],
-  #             [nil, nil, nil]  ]
-  # This is called when you use `Game.new` or `Game.create!`.
   def initialize
     super
-    self.board = Array.new(3).map{[nil, nil, nil]}
+    self.board = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
+    @com = "X" # the computer's marker
+    @hum = "O" # the user's marker
   end
 
   def update_board(player, row, column)

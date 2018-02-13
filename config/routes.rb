@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'new', to: 'games#new'
-
-  root to: "games#start_game"
+  root to: "games#home"
+  resources :games, except: [:destroy]
+  # get '/new',  to: 'games#new'
+  # get '/show', to: 'games#show'
 end
