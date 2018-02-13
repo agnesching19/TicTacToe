@@ -11,6 +11,7 @@
   "devDependencies": {
     "eslint": "^4.17.0",
     "eslint-plugin-react": "^7.6.1",
+    "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },
   "version": "1.0.0",

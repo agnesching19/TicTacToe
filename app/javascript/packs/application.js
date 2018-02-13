@@ -8,3 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+
+const list = document.getElementById("home-board");
+console.log(list instanceof HTMLTableElement);
+// => "UL"

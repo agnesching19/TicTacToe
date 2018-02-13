@@ -1,15 +1,4 @@
-tr, td {
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  .left {
-    border-right: 5px solid black;
-    width: 200px;
-    height: 200px;
-  }
-}
-
-.board {
+#home-board {
   margin-left: auto;
   margin-right: auto;
   font-size: 72px;
@@ -19,6 +8,7 @@ tr, td {
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+
     .left {
       border-right: 1px solid black;
       width: 200px;
@@ -48,12 +38,12 @@ tr, td {
       height: 200px;
     }
     a {
-      background-color: #C299FF;
-      display: inline-block;
+      background-color: #dbf5fc;
+      display: center;
       height: 100%;
       width: 100%;
       &:hover {
-        background-color: #B8B8FF;
+        background-color: #dbf5fc;
       }
     }
   }
