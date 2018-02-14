@@ -42,7 +42,7 @@ document.getElementById("grid-6").onclick = ticTac;
 document.getElementById("grid-7").onclick = ticTac;
 document.getElementById("grid-8").onclick = ticTac;
 
-let allThree = function(firstBox, secondBox, thirdBox) {
+const allThree = (firstBox, secondBox, thirdBox) => {
   let firstBoxOwner = firstBox.innerText;
   let secondBoxOwner = secondBox.innerText;
   let thirdBoxOwner = thirdBox.innerText;
@@ -57,14 +57,14 @@ let allThree = function(firstBox, secondBox, thirdBox) {
   return null;
 };
 
-let diagonalWinner = function() {
+const diagonalWinner = () => {
   let leftDownDiag = allThree(grid_0, grid_4, grid_8);
   let rightUpDiag = allThree(grid_2, grid_4, grid_6);
 
   return leftDownDiag || rightUpDiag;
 };
 
-let columnWinner = function() {
+const columnWinner = () => {
   let leftCol = allThree(grid_0, grid_3, grid_6);
   let middleCol = allThree(grid_1, grid_4, grid_7);
   let rightCol = allThree(grid_2, grid_5, grid_8);
@@ -72,7 +72,7 @@ let columnWinner = function() {
   return leftCol || (middleCol || rightCol);
 };
 
-let rowWinner = function() {
+const rowWinner = () => {
   let topRow = allThree(grid_0, grid_1, grid_2);
   let middleRow = allThree(grid_3, grid_4, grid_5);
   let bottomRow = allThree(grid_6, grid_7, grid_8);
@@ -80,11 +80,11 @@ let rowWinner = function() {
   return topRow || (middleRow || bottomRow);
 };
 
-let getWinner = function() {
+const getWinner = () => {
   return diagonalWinner() || (rowWinner() || columnWinner());
 };
 
-let winner = getWinner();
+const winner = getWinner();
 if (winner) {
   alert("Player " + winner + " won!");
 };
