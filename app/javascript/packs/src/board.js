@@ -54,9 +54,39 @@ const getWinner = function() {
 };
 
 function gameStart() {
+
+  let currentPlayer = "X";
+  let moves = 0;
+
   initialBoard.addEventListener("click", (e) => {
   e.preventDefault();
-  swal("Game starts!");
+  swal("Which symbel would you like?", {
+    buttons: {
+      X: {
+        text: 'X',
+        value: 'X',
+      },
+      O: {
+        text: 'O',
+        value: 'O',
+      }
+    },
+  })
+  .then((value) => {
+    switch(value) {
+      case 'X':
+        currentPlayer = 'X';
+        break;
+
+      case 'O':
+        currentPlayer = 'O';
+        break;
+
+        default:
+          currentPlayer = '';
+    }
+  });
+
   grid_0.innerText = '';
   grid_1.innerText = '';
   grid_2.innerText = '';
@@ -66,9 +96,6 @@ function gameStart() {
   grid_6.innerText = '';
   grid_7.innerText = '';
   grid_8.innerText = '';
-
-  let currentPlayer = "X";
-  let moves = 0;
 
   function ticTac() {
     if (this.innerText !== "X" || this.innerText !== "O") {
