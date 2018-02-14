@@ -67,23 +67,23 @@ initialBoard.addEventListener("click", (e) => {
   let currentPlayer = "X";
   let moves = 0;
 
-  function ticTac(){
+  function ticTac() {
     if (this.innerText !== "X" || this.innerText !== "O") {
       this.innerText = currentPlayer;
       currentPlayer = currentPlayer == "X" ? "O" : "X";
-      moves ++;
     }
+    moves++;
   };
 
-  document.getElementById("grid-0").onclick = ticTac;
-  document.getElementById("grid-1").onclick = ticTac;
-  document.getElementById("grid-2").onclick = ticTac;
-  document.getElementById("grid-3").onclick = ticTac;
-  document.getElementById("grid-4").onclick = ticTac;
-  document.getElementById("grid-5").onclick = ticTac;
-  document.getElementById("grid-6").onclick = ticTac;
-  document.getElementById("grid-7").onclick = ticTac;
-  document.getElementById("grid-8").onclick = ticTac;
+  document.getElementById("grid-0").addEventListener('click', ticTac);
+  document.getElementById("grid-1").addEventListener('click', ticTac);
+  document.getElementById("grid-2").addEventListener('click', ticTac);
+  document.getElementById("grid-3").addEventListener('click', ticTac);
+  document.getElementById("grid-4").addEventListener('click', ticTac);
+  document.getElementById("grid-5").addEventListener('click', ticTac);
+  document.getElementById("grid-6").addEventListener('click', ticTac);
+  document.getElementById("grid-7").addEventListener('click', ticTac);
+  document.getElementById("grid-8").addEventListener('click', ticTac);
 
   let winner = getWinner();
   if (winner) {
