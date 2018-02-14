@@ -56,9 +56,7 @@ const getWinner = function() {
 function gameStart() {
   initialBoard.addEventListener("click", (e) => {
   e.preventDefault();
-  swal({
-    text: 'Game starts!'
-  });
+  swal("Game starts!");
   grid_0.innerText = '';
   grid_1.innerText = '';
   grid_2.innerText = '';
