@@ -1,3 +1,5 @@
+import swal from 'sweetalert';
+
 const grid_0 = document.getElementById('grid-0');
 const grid_1 = document.getElementById('grid-1');
 const grid_2 = document.getElementById('grid-2');
@@ -51,9 +53,12 @@ const getWinner = function() {
   return diagonalWinner() || (rowWinner() || columnWinner());
 };
 
-initialBoard.addEventListener("click", (e) => {
+function gameStart() {
+  initialBoard.addEventListener("click", (e) => {
   e.preventDefault();
-  alert('Game starts!');
+  swal({
+    text: 'Game starts!'
+  });
   grid_0.innerText = '';
   grid_1.innerText = '';
   grid_2.innerText = '';
@@ -76,11 +81,13 @@ initialBoard.addEventListener("click", (e) => {
     let winner = getWinner();
 
     if (winner) {
-      alert("Player " + winner + " win!");
-      // resetGame();
-    } else if (moves > 9){
-      alert("Neither player won!");
-      // resetGame();
+      swal({
+        text: "Player " + winner + " win!"
+      });
+    } else if (moves >= 9){
+      swal({
+        text: "Neither player win!"
+      });
     }
     console.log(moves);
   };
@@ -94,5 +101,7 @@ initialBoard.addEventListener("click", (e) => {
   document.getElementById("grid-6").addEventListener('click', ticTac);
   document.getElementById("grid-7").addEventListener('click', ticTac);
   document.getElementById("grid-8").addEventListener('click', ticTac);
-});
+  });
+};
 
+gameStart();

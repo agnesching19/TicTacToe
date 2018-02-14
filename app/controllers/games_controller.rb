@@ -7,6 +7,10 @@ class GamesController < ApplicationController
     @game = Game.new
   end
 
+  def new_game
+     @game = Game.new
+  end
+
   def start_game
     # loop through until the game was won or tied
     until game_is_over(@board) || tie(@board)

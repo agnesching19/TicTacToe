@@ -1,0 +1,24 @@
+<div class='container'>
+  <div>
+    <table class='board' id='home-board'>
+      <tbody>
+        <tr>
+          <td id='grid-0' class='left top'><a><%= @game.board[0] %></a></td>
+          <td id='grid-1' class='top vertical-mid'><a><%= @game.board[1] %></a></td>
+          <td id='grid-2' class='top right'><a><%= @game.board[2] %></a></td>
+        </tr>
+        <tr>
+          <td id='grid-3' class='left horizontal-mid'><a><%= @game.board[3] %></a></td>
+          <td id='grid-4' class='vertical-mid horizontal-mid'><a><%= @game.board[4] %></a></td>
+          <td id='grid-5' class='right horizontal-mid'><a><%= @game.board[5] %></a></td>
+        </tr>
+        <tr>
+          <td id='grid-6' class='left bottom'><a><%= @game.board[6] %></a></td>
+          <td id='grid-7' class='vertical-mid bottom'><a><%= @game.board[7] %></a></td>
+          <td id='grid-8' class='right bottom'><a><%= @game.board[8] %></a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
