@@ -71,8 +71,17 @@ initialBoard.addEventListener("click", (e) => {
     if (this.innerText !== "X" || this.innerText !== "O") {
       this.innerText = currentPlayer;
       currentPlayer = currentPlayer == "X" ? "O" : "X";
+      moves++;
     }
-    moves++;
+    let winner = getWinner();
+
+    if (winner) {
+      alert("Player " + winner + " win!");
+
+    } else if (moves > 9){
+      alert("Neither player won!");
+    }
+    console.log(moves);
   };
 
   document.getElementById("grid-0").addEventListener('click', ticTac);
@@ -86,6 +95,7 @@ initialBoard.addEventListener("click", (e) => {
   document.getElementById("grid-8").addEventListener('click', ticTac);
 
   let winner = getWinner();
+
   if (winner) {
     alert("Player " + winner + " won!");
   } else if (moves < 9) {
