@@ -77,9 +77,10 @@ initialBoard.addEventListener("click", (e) => {
 
     if (winner) {
       alert("Player " + winner + " win!");
-
+      // resetGame();
     } else if (moves > 9){
       alert("Neither player won!");
+      // resetGame();
     }
     console.log(moves);
   };
@@ -93,15 +94,5 @@ initialBoard.addEventListener("click", (e) => {
   document.getElementById("grid-6").addEventListener('click', ticTac);
   document.getElementById("grid-7").addEventListener('click', ticTac);
   document.getElementById("grid-8").addEventListener('click', ticTac);
-
-  let winner = getWinner();
-
-  if (winner) {
-    alert("Player " + winner + " won!");
-  } else if (moves < 9) {
-    ticTac();
-  } else {
-    alert("Neither player won!");
-  }
 });
 
