@@ -60,7 +60,7 @@ function gameStart() {
 
   initialBoard.addEventListener("click", (e) => {
   e.preventDefault();
-  swal("Which symbel would you like?", {
+  swal("Which symbel would you like to play with?", {
     buttons: {
       X: {
         text: 'X',
